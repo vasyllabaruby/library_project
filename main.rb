@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # require 'lib/entities/library'
 require 'entities/library'
 
@@ -36,6 +38,14 @@ my_library.add_order(book_rain, reader2_ivan)
 my_library.save
 
 top_reader = my_library.top_reader(2)
+puts 'Top reader (2)'
+puts top_reader
+puts '-------------'
 top_book = my_library.top_book(9)
+puts 'Top reader (all)'
+puts top_book
+puts '-------------'
 reader_quantity = my_library.top_books_readers
-puts 'yes'
+puts 'Top reader (default)'
+puts reader_quantity
+puts '-------------'

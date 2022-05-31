@@ -1,17 +1,444 @@
 --- !ruby/object:Library
-books: []
+books:
+- &8 !ruby/object:Book
+  title: Rain
+  author: &2 !ruby/object:Author
+    name: Vasyl2
+    biography: First author 2
+- &3 !ruby/object:Book
+  title: Pain
+  author: &1 !ruby/object:Author
+    name: Oleg
+    biography: Greeter
+- &5 !ruby/object:Book
+  title: The Great Gatsby
+  author: *1
+- !ruby/object:Book
+  title: Rain
+  author: *2
+- !ruby/object:Book
+  title: Pain
+  author: *1
+- !ruby/object:Book
+  title: The Great Gatsby
+  author: *1
+- !ruby/object:Book
+  title: Rain
+  author: *2
+- !ruby/object:Book
+  title: Pain
+  author: *1
+- !ruby/object:Book
+  title: The Great Gatsby
+  author: *1
+- !ruby/object:Book
+  title: Rain
+  author: *2
+- !ruby/object:Book
+  title: Pain
+  author: *1
+- !ruby/object:Book
+  title: The Great Gatsby
+  author: *1
+- !ruby/object:Book
+  title: Rain
+  author: *2
+- !ruby/object:Book
+  title: Pain
+  author: *1
+- !ruby/object:Book
+  title: The Great Gatsby
+  author: *1
+- !ruby/object:Book
+  title: Rain
+  author: *2
+- !ruby/object:Book
+  title: Pain
+  author: *1
+- !ruby/object:Book
+  title: The Great Gatsby
+  author: *1
+- !ruby/object:Book
+  title: Rain
+  author: *2
+- !ruby/object:Book
+  title: Pain
+  author: *1
+- !ruby/object:Book
+  title: The Great Gatsby
+  author: *1
 authors:
 - !ruby/object:Author
   name: Vasyl
   biography: First author 1
-- !ruby/object:Author
-  name: Vasyl2
-  biography: First author 2
+- *2
 - !ruby/object:Author
   name: Vasyl3
   biography: First author 3
+- *1
+- !ruby/object:Author
+  name: Jim
+  biography: ''
 - !ruby/object:Author
   name: Oleg
   biography: Greeter
-readers: []
-orders: []
+- !ruby/object:Author
+  name: Jim
+  biography: ''
+- !ruby/object:Author
+  name: Oleg
+  biography: Greeter
+- !ruby/object:Author
+  name: Jim
+  biography: ''
+- !ruby/object:Author
+  name: Oleg
+  biography: Greeter
+- !ruby/object:Author
+  name: Jim
+  biography: ''
+- !ruby/object:Author
+  name: Oleg
+  biography: Greeter
+- !ruby/object:Author
+  name: Jim
+  biography: ''
+- !ruby/object:Author
+  name: Oleg
+  biography: Greeter
+- !ruby/object:Author
+  name: Jim
+  biography: ''
+- !ruby/object:Author
+  name: Oleg
+  biography: Greeter
+- !ruby/object:Author
+  name: Jim
+  biography: ''
+- !ruby/object:Author
+  name: Oleg
+  biography: Greeter
+readers:
+- &4 !ruby/object:Reader
+  name: Mykola
+  email: kol12@mai.com
+  city: Chernivtsi
+  street: Main
+  house: 1
+- &6 !ruby/object:Reader
+  name: Ivan
+  email: iv@mai.com
+  city: Kyiv
+  street: Kaspruka
+  house: 5
+- &7 !ruby/object:Reader
+  name: Andrew
+  email: aaBB@mai.com
+  city: Lviv
+  street: Main
+  house: 31
+- !ruby/object:Reader
+  name: Mykola
+  email: kol12@mai.com
+  city: Chernivtsi
+  street: Main
+  house: 1
+- !ruby/object:Reader
+  name: Ivan
+  email: iv@mai.com
+  city: Kyiv
+  street: Kaspruka
+  house: 5
+- !ruby/object:Reader
+  name: Andrew
+  email: aaBB@mai.com
+  city: Lviv
+  street: Main
+  house: 31
+- !ruby/object:Reader
+  name: Mykola
+  email: kol12@mai.com
+  city: Chernivtsi
+  street: Main
+  house: 1
+- !ruby/object:Reader
+  name: Ivan
+  email: iv@mai.com
+  city: Kyiv
+  street: Kaspruka
+  house: 5
+- !ruby/object:Reader
+  name: Andrew
+  email: aaBB@mai.com
+  city: Lviv
+  street: Main
+  house: 31
+- !ruby/object:Reader
+  name: Mykola
+  email: kol12@mai.com
+  city: Chernivtsi
+  street: Main
+  house: 1
+- !ruby/object:Reader
+  name: Ivan
+  email: iv@mai.com
+  city: Kyiv
+  street: Kaspruka
+  house: 5
+- !ruby/object:Reader
+  name: Andrew
+  email: aaBB@mai.com
+  city: Lviv
+  street: Main
+  house: 31
+- !ruby/object:Reader
+  name: Mykola
+  email: kol12@mai.com
+  city: Chernivtsi
+  street: Main
+  house: 1
+- !ruby/object:Reader
+  name: Ivan
+  email: iv@mai.com
+  city: Kyiv
+  street: Kaspruka
+  house: 5
+- !ruby/object:Reader
+  name: Andrew
+  email: aaBB@mai.com
+  city: Lviv
+  street: Main
+  house: 31
+- !ruby/object:Reader
+  name: Mykola
+  email: kol12@mai.com
+  city: Chernivtsi
+  street: Main
+  house: 1
+- !ruby/object:Reader
+  name: Ivan
+  email: iv@mai.com
+  city: Kyiv
+  street: Kaspruka
+  house: 5
+- !ruby/object:Reader
+  name: Andrew
+  email: aaBB@mai.com
+  city: Lviv
+  street: Main
+  house: 31
+- !ruby/object:Reader
+  name: Mykola
+  email: kol12@mai.com
+  city: Chernivtsi
+  street: Main
+  house: 1
+- !ruby/object:Reader
+  name: Ivan
+  email: iv@mai.com
+  city: Kyiv
+  street: Kaspruka
+  house: 5
+- !ruby/object:Reader
+  name: Andrew
+  email: aaBB@mai.com
+  city: Lviv
+  street: Main
+  house: 31
+orders:
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:36:39.648842745 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:36:39.648886529 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:36:39.648899899 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:36:39.648909838 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *7
+  date: !ruby/object:DateTime 2022-05-31 18:36:39.648919568 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:36:39.648928628 +03:00
+- !ruby/object:Order
+  book: *8
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:36:39.648937432 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:37:11.573851765 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:37:11.573881849 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:37:11.573891000 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:37:11.573896976 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *7
+  date: !ruby/object:DateTime 2022-05-31 18:37:11.573902248 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:37:11.573907723 +03:00
+- !ruby/object:Order
+  book: *8
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:37:11.573912829 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:38:08.176068983 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:38:08.176097812 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:08.176106705 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:08.176112863 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *7
+  date: !ruby/object:DateTime 2022-05-31 18:38:08.176118131 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:08.176124929 +03:00
+- !ruby/object:Order
+  book: *8
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:08.176130208 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:38:27.787922356 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:38:27.787974840 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:27.787989230 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:27.787999374 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *7
+  date: !ruby/object:DateTime 2022-05-31 18:38:27.788008148 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:27.788017167 +03:00
+- !ruby/object:Order
+  book: *8
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:38:27.788027285 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:39:48.875439980 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:39:48.875467897 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:39:48.875475587 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:39:48.875480779 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *7
+  date: !ruby/object:DateTime 2022-05-31 18:39:48.875485438 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:39:48.875490099 +03:00
+- !ruby/object:Order
+  book: *8
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:39:48.875494767 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:41:32.582918627 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:41:32.582951792 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:41:32.582959155 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:41:32.582965159 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *7
+  date: !ruby/object:DateTime 2022-05-31 18:41:32.582970125 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:41:32.582974814 +03:00
+- !ruby/object:Order
+  book: *8
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:41:32.582979471 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:43:03.566874233 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *4
+  date: !ruby/object:DateTime 2022-05-31 18:43:03.566916237 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:43:03.566928924 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:43:03.566937173 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *7
+  date: !ruby/object:DateTime 2022-05-31 18:43:03.566944681 +03:00
+- !ruby/object:Order
+  book: *3
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:43:03.566951661 +03:00
+- !ruby/object:Order
+  book: *8
+  reader: *6
+  date: !ruby/object:DateTime 2022-05-31 18:43:03.566958182 +03:00

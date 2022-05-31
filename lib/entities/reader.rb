@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'services/validation_service'
 
 class Reader
@@ -15,7 +17,8 @@ class Reader
   end
 
   def check
-    return true if ValidationService.not_blank(@name, @email, @city, @street) && @house.is_a?(Integer) && @house > 0
+    return true if ValidationService.not_blank(@name, @email, @city,
+                                               @street) && @house.is_a?(Integer) && @house.positive?
 
     false
   end

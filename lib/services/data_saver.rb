@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 class DataSaver
   def self.save(filename, data)
@@ -5,6 +6,6 @@ class DataSaver
   end
 
   def self.load(filename)
-    result = Psych.unsafe_load(File.read(filename))
+    Psych.unsafe_load(File.read(filename))
   end
 end

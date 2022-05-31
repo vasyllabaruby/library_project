@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |spec|
   spec.name = 'library'
-  spec.version = "0.0.1"
+  spec.version = '0.0.1'
   spec.authors = ['Vasyl Laba']
   spec.email = ['vasyl.laba@rubygarage.org']
   spec.summary = 'Write a short summary, because RubyGems requires one.'

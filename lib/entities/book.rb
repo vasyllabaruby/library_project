@@ -8,9 +8,7 @@ class Book
   def initialize(title, author)
     @title = title
     @author = author
-    unless check
-      raise Errno
-    end
+    raise Errno unless check
   end
 
   def check

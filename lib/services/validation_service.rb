@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ValidationService
   def self.not_blank(*str)
     str.each do |el|

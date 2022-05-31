@@ -8,4 +8,3 @@ gemspec
 gem 'rubocop', require: false
 
 gem 'fasterer', '~> 0.9.0'
-

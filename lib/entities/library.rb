@@ -11,6 +11,7 @@ require 'set'
 
 class Library
   attr_reader :books, :authors, :readers, :orders
+
   FILE = 'Library.data'
 
   def initialize
@@ -85,7 +86,7 @@ class Library
   end
 
   def sort(hash, quantity)
-    hash = hash.sort_by { |key, value| value.length }
+    hash = hash.sort_by { |_key, value| value.length }
     return hash.reverse! if quantity >= hash.length
 
     result = []
@@ -93,4 +94,3 @@ class Library
     result
   end
 end
-

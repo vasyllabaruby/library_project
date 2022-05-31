@@ -17,20 +17,20 @@ my_library.add_reader('Mykola', 'kol12@mai.com', 'Chernivtsi', 'Main', 1)
 my_library.add_reader('Ivan', 'iv@mai.com', 'Kyiv', 'Kaspruka', 5)
 my_library.add_reader('Andrew', 'aaBB@mai.com', 'Lviv', 'Main', 31)
 
-book1 = my_library.books[1]
-book2 = my_library.books[2]
+book_pain = my_library.books[1]
+book_great = my_library.books[2]
 book_rain = my_library.books[0]
 
 reader1_mykola = my_library.readers[0]
 reader2_ivan = my_library.readers[1]
 reader2_andrew = my_library.readers[2]
 
-my_library.add_order(book1, reader1_mykola)
-my_library.add_order(book2, reader1_mykola)
-my_library.add_order(book2, reader2_ivan)
-my_library.add_order(book2, reader2_ivan)
-my_library.add_order(book1, reader2_andrew)
-my_library.add_order(book1, reader2_ivan)
+my_library.add_order(book_pain, reader1_mykola)
+my_library.add_order(book_great, reader1_mykola)
+my_library.add_order(book_great, reader2_ivan)
+my_library.add_order(book_great, reader2_ivan)
+my_library.add_order(book_pain, reader2_andrew)
+my_library.add_order(book_pain, reader2_ivan)
 my_library.add_order(book_rain, reader2_ivan)
 
 # my_library.save

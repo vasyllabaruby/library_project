@@ -49,27 +49,37 @@ class Library
   end
 
   def top_reader(quantity = 1)
-    readers_hash = Hash.new(0)
+    readers_hash = Hash.new(false)
     @orders.each do |order|
-      readers_hash[order.reader] += 1
+      if readers_hash[order.reader]
+        readers_hash[order.reader].add(order.book)
+      else
+        h = Set.new
+        readers_hash[order.reader] = h.add(order.book)
+      end
     end
     sort(readers_hash, quantity)
   end
 
   def top_book(quantity = 1)
-    books_hash = Hash.new(0)
+    books_hash = Hash.new(false)
     @orders.each do |order|
-      books_hash[order.book] += 1
+      if books_hash[order.book]
+        books_hash[order.book].add(order.reader)
+      else
+        h = Set.new
+        books_hash[order.book] = h.add(order.reader)
+      end
     end
     sort(books_hash, quantity)
   end
 
-  def top_books_reader(quantity = 3)
+  def top_books_readers(quantity = 3)
     0
   end
 
   def sort(hash, quantity)
-    hash = hash.sort_by { |key, value| value }
+    hash = hash.sort_by { |key, value| value.length }
     return hash.reverse! if quantity >= hash.length
 
     result = []

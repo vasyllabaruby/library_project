@@ -9,7 +9,7 @@ class Book
     @title = title
     @author = author
     unless check
-      raise Errno # передати name
+      raise Errno
     end
   end
 

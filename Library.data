@@ -1,0 +1,17 @@
+--- !ruby/object:Library
+books: []
+authors:
+- !ruby/object:Author
+  name: Vasyl
+  biography: First author 1
+- !ruby/object:Author
+  name: Vasyl2
+  biography: First author 2
+- !ruby/object:Author
+  name: Vasyl3
+  biography: First author 3
+- !ruby/object:Author
+  name: Oleg
+  biography: Greeter
+readers: []
+orders: []

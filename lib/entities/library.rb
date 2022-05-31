@@ -7,6 +7,7 @@ require 'entities/reader'
 require 'services/data_saver'
 require 'yaml'
 require 'date'
+require 'set'
 
 class Library
   attr_reader :books, :authors, :readers, :orders
@@ -75,7 +76,12 @@ class Library
   end
 
   def top_books_readers(quantity = 3)
-    0
+    top_books_arr = top_book(quantity)
+    total_readers = Set.new
+    top_books_arr.each do |el|
+      total_readers += el[1]
+    end
+    total_readers
   end
 
   def sort(hash, quantity)

@@ -33,10 +33,9 @@ my_library.add_order(book_pain, reader2_andrew)
 my_library.add_order(book_pain, reader2_ivan)
 my_library.add_order(book_rain, reader2_ivan)
 
-# my_library.save
+my_library.save
 
 top_reader = my_library.top_reader(2)
 top_book = my_library.top_book(9)
-
-# reader_quantity = my_library.reader_quantity
+reader_quantity = my_library.top_books_readers
 puts 'yes'

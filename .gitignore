@@ -1,1 +1,4 @@
 *.data
+*.gemspec
+*.lock
+Gemfile

@@ -14,11 +14,15 @@ class Library
   attr_reader :books, :authors, :readers, :orders
 
   def initialize
-    entity = load
-    @books = entity.books
-    @authors = entity.authors
-    @readers = entity.readers
-    @orders = entity.orders
+    @books = []
+    @authors = []
+    @readers = []
+    @orders = []
+    loaded_entities = load
+    @books = loaded_entities.books
+    @authors = loaded_entities.authors
+    @readers = loaded_entities.readers
+    @orders = loaded_entities.orders
   end
 
   def add_author(name, biography = '')

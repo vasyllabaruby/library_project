@@ -16,12 +16,10 @@ class Reader
   end
 
   def validate
-    return true if validate_presence(@name) && validate_class(@name, String) && not_empty(@name) &&
-                   validate_presence(@email) && validate_class(@email, String) && not_empty(@email) &&
-                   validate_presence(@city) && validate_class(@city, String) && not_empty(@city) &&
-                   validate_presence(@street) && validate_class(@street, String) && not_empty(@street) &&
-                   validate_presence(@street) && validate_class(@house, Integer) && validate_positive(@house)
-
-    false
+    validate_presence(@name) && validate_class(@name, String) && not_empty(@name) &&
+      validate_presence(@email) && validate_class(@email, String) && not_empty(@email) &&
+      validate_presence(@city) && validate_class(@city, String) && not_empty(@city) &&
+      validate_presence(@street) && validate_class(@street, String) && not_empty(@street) &&
+      validate_presence(@street) && validate_class(@house, Integer) && validate_positive(@house)
   end
 end

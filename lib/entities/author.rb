@@ -13,8 +13,6 @@ class Author
   end
 
   def validate
-    return true if validate_presence(@name) && validate_class(@name, String) && not_empty(@name)
-
-    false
+    validate_presence(@name) && validate_class(@name, String) && not_empty(@name)
   end
 end

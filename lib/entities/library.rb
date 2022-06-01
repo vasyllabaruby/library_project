@@ -20,24 +20,20 @@ class Library
     load_lib
   end
 
-  def add_author(name, biography = '')
-    new_author = Author.new(name, biography)
-    @authors.push(new_author)
+  def add_author(author)
+    @authors.push(author)
   end
 
-  def add_order(book, reader, date = DateTime.now)
-    new_order = Order.new(book, reader, date)
-    @orders.push(new_order)
+  def add_order(order)
+    @orders.push(order)
   end
 
-  def add_book(title, author)
-    new_book = Book.new(title, author)
-    @books.push new_book
+  def add_book(book)
+    @books.push(book)
   end
 
-  def add_reader(name, email, city, street, house)
-    new_reader = Reader.new(name, email, city, street, house)
-    @readers.push(new_reader)
+  def add_reader(reader)
+    @readers.push(reader)
   end
 
   def save_lib

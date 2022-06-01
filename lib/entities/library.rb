@@ -54,28 +54,12 @@ class Library
   end
 
   def top_reader(quantity = DEFAULT_QUANTITY)
-    readers_hash = Hash.new(false)
-    @orders.each do |order|
-      if readers_hash[order.reader]
-        readers_hash[order.reader].add(order.book)
-      else
-        h = Set.new
-        readers_hash[order.reader] = h.add(order.book)
-      end
-    end
+    readers_hash = @orders.group_by(&:reader)
     sort(readers_hash, quantity)
   end
 
   def top_book(quantity = DEFAULT_QUANTITY)
-    books_hash = Hash.new(false)
-    @orders.each do |order|
-      if books_hash[order.book]
-        books_hash[order.book].add(order.reader)
-      else
-        h = Set.new
-        books_hash[order.book] = h.add(order.reader)
-      end
-    end
+    books_hash = @orders.group_by(&:book)
     sort(books_hash, quantity)
   end
 

@@ -2,7 +2,7 @@ require 'optionparser'
 
 module ValidationService
   def validate_positive(variable)
-    return true if variable.positive?
+    return if variable.positive?
 
     raise ::OptionParser::InvalidArgument, 'InvalidArgument error, variable should be positive'
   end

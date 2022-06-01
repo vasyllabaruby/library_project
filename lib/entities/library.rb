@@ -12,6 +12,9 @@ class Library
   include DataSaver
   attr_reader :books, :authors, :readers, :orders
 
+  DEFAULT_QUANTITY = 1
+  TOP_READERS_DEFAULT_QUANTITY = 1
+
   def initialize
     @books = []
     @authors = []
@@ -50,7 +53,7 @@ class Library
     end
   end
 
-  def top_reader(quantity = 1)
+  def top_reader(quantity = DEFAULT_QUANTITY)
     readers_hash = Hash.new(false)
     @orders.each do |order|
       if readers_hash[order.reader]
@@ -63,7 +66,7 @@ class Library
     sort(readers_hash, quantity)
   end
 
-  def top_book(quantity = 1)
+  def top_book(quantity = DEFAULT_QUANTITY)
     books_hash = Hash.new(false)
     @orders.each do |order|
       if books_hash[order.book]
@@ -76,7 +79,7 @@ class Library
     sort(books_hash, quantity)
   end
 
-  def top_books_readers(quantity = 3)
+  def top_books_readers(quantity = TOP_READERS_DEFAULT_QUANTITY)
     top_books_arr = top_book(quantity)
     total_readers = Set.new
     top_books_arr.each do |el|

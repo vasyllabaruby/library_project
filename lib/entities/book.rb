@@ -13,7 +13,10 @@ class Book
   end
 
   def validate
-    validate_presence(@title) && validate_class(@title, String) && not_empty(@title) &&
-      validate_presence(@author) && validate_class(@author, Author)
+    validate_presence(@title)
+    validate_class(@title, String)
+    not_empty(@title)
+    validate_presence(@author)
+    validate_class(@author, Author)
   end
 end

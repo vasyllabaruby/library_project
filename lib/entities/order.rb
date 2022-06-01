@@ -15,7 +15,9 @@ class Order
   end
 
   def validate
-    validate_presence(@book) && validate_class(@book, Book) && validate_class(@reader, Reader) &&
-      validate_class(@date, Date)
+    validate_presence(@book)
+    validate_class(@book, Book)
+    validate_class(@reader, Reader)
+    validate_class(@date, Date)
   end
 end

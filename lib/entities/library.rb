@@ -17,13 +17,7 @@ class Library
     @authors = []
     @readers = []
     @orders = []
-    loaded_entities = load
-    if loaded_entities.is_a?(Library)
-      @books = loaded_entities.books
-      @authors = loaded_entities.authors
-      @readers = loaded_entities.readers
-      @orders = loaded_entities.orders
-    end
+    load_lib
   end
 
   def add_author(name, biography = '')
@@ -48,6 +42,16 @@ class Library
 
   def save_lib
     save(self)
+  end
+
+  def load_lib
+    loaded_entities = load
+    if loaded_entities.is_a?(Library)
+      @books = loaded_entities.books
+      @authors = loaded_entities.authors
+      @readers = loaded_entities.readers
+      @orders = loaded_entities.orders
+    end
   end
 
   def top_reader(quantity = 1)

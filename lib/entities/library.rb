@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'entities/author'
 require 'entities/book'
 require 'entities/order'
@@ -8,6 +6,7 @@ require 'services/data_saver'
 require 'yaml'
 require 'date'
 require 'set'
+require 'entities/library'
 
 class Library
   include DataSaver
@@ -19,10 +18,12 @@ class Library
     @readers = []
     @orders = []
     loaded_entities = load
-    @books = loaded_entities.books
-    @authors = loaded_entities.authors
-    @readers = loaded_entities.readers
-    @orders = loaded_entities.orders
+    if loaded_entities.is_a?(Library)
+      @books = loaded_entities.books
+      @authors = loaded_entities.authors
+      @readers = loaded_entities.readers
+      @orders = loaded_entities.orders
+    end
   end
 
   def add_author(name, biography = '')

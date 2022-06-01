@@ -10,10 +10,11 @@ require 'date'
 require 'set'
 
 class Library
+  include DataSaver
   attr_reader :books, :authors, :readers, :orders
 
   def initialize
-    entity = Library.load
+    entity = load
     @books = entity.books
     @authors = entity.authors
     @readers = entity.readers
@@ -40,12 +41,8 @@ class Library
     @readers.push(new_reader)
   end
 
-  def save
-    DataSaver.save(self)
-  end
-
-  def self.load
-    DataSaver.load
+  def save_lib
+    save(self)
   end
 
   def top_reader(quantity = 1)
@@ -82,6 +79,8 @@ class Library
     end
     total_readers
   end
+
+  private
 
   def sort(hash, quantity)
     hash = hash.sort_by { |_key, value| value.length }

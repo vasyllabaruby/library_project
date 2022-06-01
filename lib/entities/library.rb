@@ -12,8 +12,6 @@ require 'set'
 class Library
   attr_reader :books, :authors, :readers, :orders
 
-  FILE = 'Library.data'
-
   def initialize
     entity = Library.load
     @books = entity.books
@@ -43,11 +41,11 @@ class Library
   end
 
   def save
-    DataSaver.save(FILE, self)
+    DataSaver.save(self)
   end
 
   def self.load
-    DataSaver.load(FILE)
+    DataSaver.load
   end
 
   def top_reader(quantity = 1)

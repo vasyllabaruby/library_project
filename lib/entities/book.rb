@@ -9,10 +9,10 @@ class Book
   def initialize(title, author)
     @title = title
     @author = author
-    check
+    validate
   end
 
-  def check
+  def validate
     return true if validate_presence(@title) && validate_class(@title, String) && not_empty(@title) &&
                    validate_presence(@author) && validate_class(@author, Author)
 

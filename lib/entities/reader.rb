@@ -12,10 +12,10 @@ class Reader
     @city = city
     @street = street
     @house = house
-    check
+    validate
   end
 
-  def check
+  def validate
     return true if validate_presence(@name) && validate_class(@name, String) && not_empty(@name) &&
                    validate_presence(@email) && validate_class(@email, String) && not_empty(@email) &&
                    validate_presence(@city) && validate_class(@city, String) && not_empty(@city) &&

@@ -11,10 +11,10 @@ class Order
     @book = book
     @reader = reader
     @date = date
-    check
+    validate
   end
 
-  def check
+  def validate
     return true if validate_presence(@book) && validate_class(@book, Book) &&
                    validate_class(@reader, Reader) &&
                    validate_class(@date, Date)

@@ -3,6 +3,7 @@
 require 'services/validation_service'
 
 class Reader
+  include ValidationService
   attr_accessor :name, :email, :city, :street, :house
 
   def initialize(name, email, city, street, house)
@@ -11,14 +12,15 @@ class Reader
     @city = city
     @street = street
     @house = house
-    unless check
-      raise Errno # передати name
-    end
+    check
   end
 
   def check
-    return true if ValidationService.not_blank(@name, @email, @city,
-                                               @street) && @house.is_a?(Integer) && @house.positive?
+    return true if validate_presence(@name) && validate_class(@name, String) && not_empty(@name) &&
+                   validate_presence(@email) && validate_class(@email, String) && not_empty(@email) &&
+                   validate_presence(@city) && validate_class(@city, String) && not_empty(@city) &&
+                   validate_presence(@street) && validate_class(@street, String) && not_empty(@street) &&
+                   validate_presence(@street) && validate_class(@house, Integer) && validate_positive(@house)
 
     false
   end

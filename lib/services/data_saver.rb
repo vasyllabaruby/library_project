@@ -1,9 +1,9 @@
 require 'rdoc'
 
 module DataSaver
-  DEFAULT_FILENAME = 'Library.data'
+  DEFAULT_FILENAME = 'Library.data'.freeze
 
-  def save(filename = DEFAULT_FILENAME, data)
+  def save(data, filename = DEFAULT_FILENAME)
     File.open(filename, 'w') { |f| f.write(YAML.dump(data)) }
   end
 

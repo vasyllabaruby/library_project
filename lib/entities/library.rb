@@ -13,7 +13,7 @@ class Library
   attr_reader :books, :authors, :readers, :orders
 
   DEFAULT_QUANTITY = 1
-  TOP_READERS_DEFAULT_QUANTITY = 1
+  TOP_READERS_DEFAULT_QUANTITY = 3
 
   def initialize
     @books = []

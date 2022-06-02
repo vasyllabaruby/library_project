@@ -67,8 +67,7 @@ class Library
 
   def top_books_readers_count(quantity = TOP_READERS_DEFAULT_QUANTITY)
     books_hash = @orders.group_by(&:book)
-    books_result = sort(books_hash, quantity).transpose
-    orders_arr = books_result[1].flatten
+    orders_arr = sort(books_hash, quantity).transpose[1].flatten
     total_readers = Set.new
     orders_arr.each do |el|
       total_readers.add(el.reader)

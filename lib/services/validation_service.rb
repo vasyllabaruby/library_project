@@ -8,7 +8,7 @@ module ValidationService
   end
 
   def validate_class(variable, class_name)
-    return true if variable.is_a?(class_name)
+    return if variable.is_a?(class_name)
 
     raise ::OptionParser::InvalidArgument, "InvalidArgument error, field should be #{class_name} type"
   end

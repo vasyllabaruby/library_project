@@ -76,10 +76,9 @@ class Library
 
   def sort(hash, quantity)
     hash = hash.sort_by { |_key, value| value.length }
-    return hash.reverse! if quantity >= hash.length
+    hash.reverse!
+    return hash if quantity >= hash.length
 
-    result = []
-    quantity.times { result.push(hash.pop) }
-    result
+    hash.first(quantity)
   end
 end

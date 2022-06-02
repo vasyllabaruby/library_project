@@ -46,10 +46,9 @@ puts 'Top reader (2)'
 puts top_reader
 puts '-------------'
 top_book = my_library.top_book(9)
-puts 'Top reader (all)'
+puts 'Top book (all)'
 puts top_book
 puts '-------------'
-reader_quantity = my_library.top_books_readers
-puts 'Top reader (default)'
-puts reader_quantity
+reader_count = my_library.top_books_readers_count
+puts "Top book reader count (default) #{reader_count}"
 puts '-------------'

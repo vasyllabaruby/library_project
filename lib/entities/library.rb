@@ -55,21 +55,25 @@ class Library
 
   def top_reader(quantity = DEFAULT_QUANTITY)
     readers_hash = @orders.group_by(&:reader)
-    sort(readers_hash, quantity)
+    readers_result = sort(readers_hash, quantity).transpose
+    readers_result[0]
   end
 
   def top_book(quantity = DEFAULT_QUANTITY)
     books_hash = @orders.group_by(&:book)
-    sort(books_hash, quantity)
+    books_result = sort(books_hash, quantity).transpose
+    books_result[0]
   end
 
-  def top_books_readers(quantity = TOP_READERS_DEFAULT_QUANTITY)
-    top_books_arr = top_book(quantity)
+  def top_books_readers_count(quantity = TOP_READERS_DEFAULT_QUANTITY)
+    books_hash = @orders.group_by(&:book)
+    books_result = sort(books_hash, quantity).transpose
+    orders_arr = books_result[1].flatten
     total_readers = Set.new
-    top_books_arr.each do |el|
-      total_readers += el[1]
+    orders_arr.each do |el|
+      total_readers.add(el.reader)
     end
-    total_readers
+    total_readers.length
   end
 
   private
